@@ -8,6 +8,8 @@ class Main
     public function treeView(){
         $tree=new Tree();
         
+        $items=$tree->getDefaultTree();
+        
         require_once 'web/view/mainView.php';
     }
 }

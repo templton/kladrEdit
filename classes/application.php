@@ -34,16 +34,28 @@ class Application {
         self::$assets=[
             'js'=>[
                 'jquery-3.2.1.min.js',
-                'bootstrap.min.js'
+                'bootstrap.min.js',
+                'functions.js'
             ],
             'css'=>[
-                'bootstrap.min.css'
+                'bootstrap.min.css',
+                'style.css'
             ]
         ];
     }
     
     public static function getAssets(){
-        
+        $assets='';
+        $assets.="\r\n<!-- Скрипты -->\r\n";
+        foreach (self::$assets['js'] as $item){
+            $assets.="\r\n".'<script src="web/assets/js/'.$item.'"></script>';
+        }
+        $assets.="\r\n\r\n<!-- Таблицы стилей -->\r\n";
+        foreach (self::$assets['css'] as $item){
+            $assets.="\r\n".'<link rel="stylesheet" type="text/css" href="web/assets/css/'.$item.'" >';
+        }
+        $assets.="\r\n\r\n";
+        return $assets;
     }
     
     

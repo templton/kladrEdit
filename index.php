@@ -8,12 +8,28 @@ require_once 'classes/tree.php';
 require_once 'classes/route.php';
 require_once 'classes/application.php';
 require_once 'web/main.php';
+require_once 'web/actions.php';
 
 $App=new Application($config);
 
+/*
 $tree=new Tree();
+echo '<pre>';
+print_r($tree->getSearch('торг'));
+echo '</pre>';
+
+
+die;
+
+
+
+$tree=new Tree();
+ * 
+ */
 
 Route::Route();
+        
+        
 
 
 

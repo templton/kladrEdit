@@ -1,0 +1,42 @@
+.head-list{
+    margin-top: 10px;
+}
+
+
+.closed .glyphicon-chevron-right{
+    display: inline-block;
+}
+
+.opened .glyphicon-chevron-right{
+    display: none;
+}
+
+.closed .glyphicon-chevron-down{
+    display: none;
+}
+
+.opened .glyphicon-chevron-down{
+    display: inline-block;
+}
+
+.title{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.title:hover{
+    background: #F3E9DB;
+    cursor: pointer;
+}
+
+.edit-item{
+}
+
+#editwinow [name="item-name"]{
+    width: 100%;
+}
+
+.highlight{
+    background: yellowgreen;
+}
