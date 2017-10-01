@@ -30,7 +30,7 @@ class Tree {
     public function edit($id, $text) {
         $db = Application::getDB();
         $sql = 'UPDATE class_okved SET `name`="' . $text . '" WHERE id=' . $id;
-        $data = $db->query($sql);
+        $data = $db->query($sql);      
         return $data;
     }
 

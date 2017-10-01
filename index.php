@@ -5,6 +5,7 @@
 
 require_once 'config/config.php';
 require_once 'classes/tree.php';
+require_once 'classes/user.php';
 require_once 'classes/route.php';
 require_once 'classes/application.php';
 require_once 'web/main.php';

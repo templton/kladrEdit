@@ -82,9 +82,10 @@ var Controller = {
 
         $('#editwinow .save-btn').off().on('click', function () {
             var text = $('#editwinow [name="item-name"]').val().trim();
+            var old_text=$('.title[child="' + id + '"] .text').text();
 
             //Запрос на редактирование
-            $.post('index.php?ajax=1', {filters: {id: id, text: text}, action: 'editItemTree'}, function (result, status) {
+            $.post('index.php?ajax=1', {filters: {id: id, text: text, old_text:old_text}, action: 'editItemTree'}, function (result, status) {
                 result = JSON.parse(result);
                 if (result.error !== undefined) {
                     alert(result.error);

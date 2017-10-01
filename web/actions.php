@@ -21,8 +21,17 @@ class Actions {
     public function editItemTree($filters){
         $id=(int)$filters['id'];
         $text= addslashes($filters['text']);
+        $old_text=addslashes($filters['old_text']);
         $tree=new Tree();
-        return $tree->edit($id, $text);
+        $result=$tree->edit($id, $text);
+        
+        //Сохранить инфо об изменении записи
+        if ($result){
+            $user=new User();
+            $user->saveLog($id,$text, $old_text);
+        }
+        
+        return true;
     }
 
 }
